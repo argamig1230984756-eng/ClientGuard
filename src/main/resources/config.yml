@@ -1,0 +1,76 @@
+# Actions: NONE (alert only), KICK, COMMAND
+action: KICK
+kick-message: "&cYou were removed: unauthorized client/mod detected (&e%reason%&c)."
+
+# Used when action is COMMAND. Placeholders: %player% %reason%
+commands:
+  - "ban %player% Unauthorized client: %reason%"
+
+# Ticks after join at which the client is (re)checked
+check-delays: [40, 100, 200, 400]
+
+# Brands matched by "contains", lowercase. Vanilla/Fabric/Forge etc. are NOT listed.
+brand-blacklist:
+  - fastclient
+  - fast-client
+  - doki
+  - dawn
+  - meteor
+  - wurst
+  - impact
+  - aristois
+  - futureclient
+  - rusherhack
+  - liquidbounce
+  - vape
+  - novoline
+  - sigma
+  - salhack
+  - huzuni
+  - inertia
+  - lambda
+  - phobos
+  - 3arthh4ck
+  - konas
+  - thunderhack
+  - pyro
+  - bleachhack
+  - tenacity
+  - rise
+  - astolfo
+  - exhibition
+  - remix
+  - moonlight
+  - drip
+  - entropy
+  - cheat
+  - hack
+
+# Plugin channels registered by banned mods (contains match, lowercase)
+channel-blacklist:
+  - wdl
+  - worlddownloader
+  - meteor
+  - wurst
+  - liquidbounce
+  - rusherhack
+  - fastclient
+  - doki
+  - dawn
+
+# Brands that are always allowed (checked first).
+brand-whitelist:
+  - vanilla
+  - fabric
+  - forge
+  - neoforge
+  - quilt
+  - lunarclient
+  - badlion
+  - feather
+
+# Allow clients whose brand is missing (never sent)? false = flag them
+allow-missing-brand: true
+
+alert-staff: true
+log-to-console: true

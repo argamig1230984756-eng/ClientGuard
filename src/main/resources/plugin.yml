@@ -1,0 +1,18 @@
+name: ClientGuard
+version: 1.0.0
+main: dev.clientguard.ClientGuard
+api-version: '1.21'
+description: Server-side detection of banned mods and hacked clients
+commands:
+  clientguard:
+    description: ClientGuard commands
+    usage: /clientguard <check <player>|reload>
+    aliases: [cg]
+    permission: clientguard.admin
+permissions:
+  clientguard.admin:
+    default: op
+  clientguard.alerts:
+    default: op
+  clientguard.bypass:
+    default: false
